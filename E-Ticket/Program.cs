@@ -75,8 +75,8 @@ namespace E_Ticket
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             //Seed Data
-            AppDbInitializer.Seed(app);
-            AppDbInitializer.SeedUsersAndRoleAsync(app).Wait();
+            //AppDbInitializer.Seed(app);
+            //AppDbInitializer.SeedUsersAndRoleAsync(app).Wait();
 
 
             app.Run();
