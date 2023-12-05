@@ -20,7 +20,8 @@ namespace E_Ticket
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+            //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+            options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
             builder.Services.AddScoped<IActorsService, ActorsService>();
 			builder.Services.AddScoped<IMoviesService, MoviesService>();

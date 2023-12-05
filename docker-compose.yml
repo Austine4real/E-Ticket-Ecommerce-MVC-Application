@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  e-ticket:
+    image: ${DOCKER_REGISTRY-}eticket
+    build:
+      context: .
+      dockerfile: E-Ticket\Dockerfile
